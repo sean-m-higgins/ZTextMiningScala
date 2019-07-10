@@ -1,0 +1,642 @@
+2019-03-13 13:52:43 WARN  NativeCodeLoader:62 - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2019-03-13 13:52:45 INFO  SparkContext:54 - Running Spark version 2.4.0
+2019-03-13 13:52:45 INFO  SparkContext:54 - Submitted application: LDAExample with {
+  input:	List(/Users/SeanHiggins/ZTextMining/src/main/data/processedData/processedZettels),
+  k:	20,
+  maxIterations:	10,
+  docConcentration:	-1.0,
+  topicConcentration:	-1.0,
+  vocabSize:	10000,
+  stopwordFile:	,
+  algorithm:	em,
+  checkpointDir:	None,
+  checkpointInterval:	10
+}
+2019-03-13 13:52:45 INFO  SecurityManager:54 - Changing view acls to: SeanHiggins
+2019-03-13 13:52:45 INFO  SecurityManager:54 - Changing modify acls to: SeanHiggins
+2019-03-13 13:52:45 INFO  SecurityManager:54 - Changing view acls groups to: 
+2019-03-13 13:52:45 INFO  SecurityManager:54 - Changing modify acls groups to: 
+2019-03-13 13:52:45 INFO  SecurityManager:54 - SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(SeanHiggins); groups with view permissions: Set(); users  with modify permissions: Set(SeanHiggins); groups with modify permissions: Set()
+2019-03-13 13:52:45 INFO  Utils:54 - Successfully started service 'sparkDriver' on port 53505.
+2019-03-13 13:52:45 INFO  SparkEnv:54 - Registering MapOutputTracker
+2019-03-13 13:52:45 INFO  SparkEnv:54 - Registering BlockManagerMaster
+2019-03-13 13:52:45 INFO  BlockManagerMasterEndpoint:54 - Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+2019-03-13 13:52:45 INFO  BlockManagerMasterEndpoint:54 - BlockManagerMasterEndpoint up
+2019-03-13 13:52:45 INFO  DiskBlockManager:54 - Created local directory at /private/var/folders/tp/qc0shgmd5y36vv48mt20b0z00000gn/T/blockmgr-ce0e3e64-8647-4a79-a62f-2c988443e401
+2019-03-13 13:52:45 INFO  MemoryStore:54 - MemoryStore started with capacity 366.3 MB
+2019-03-13 13:52:45 INFO  SparkEnv:54 - Registering OutputCommitCoordinator
+2019-03-13 13:52:46 INFO  log:192 - Logging initialized @4640ms
+2019-03-13 13:52:46 INFO  Server:351 - jetty-9.3.z-SNAPSHOT, build timestamp: unknown, git hash: unknown
+2019-03-13 13:52:46 INFO  Server:419 - Started @4774ms
+2019-03-13 13:52:46 INFO  AbstractConnector:278 - Started ServerConnector@60325987{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+2019-03-13 13:52:46 INFO  Utils:54 - Successfully started service 'SparkUI' on port 4040.
+2019-03-13 13:52:46 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@46c269e0{/jobs,null,AVAILABLE,@Spark}
+2019-03-13 13:52:46 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@70228253{/jobs/json,null,AVAILABLE,@Spark}
+2019-03-13 13:52:46 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@63c12e52{/jobs/job,null,AVAILABLE,@Spark}
+2019-03-13 13:52:46 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@26c47874{/jobs/job/json,null,AVAILABLE,@Spark}
+2019-03-13 13:52:46 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@421056e5{/stages,null,AVAILABLE,@Spark}
+2019-03-13 13:52:46 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@2849434b{/stages/json,null,AVAILABLE,@Spark}
+2019-03-13 13:52:46 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@60bbacfc{/stages/stage,null,AVAILABLE,@Spark}
+2019-03-13 13:52:46 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@476fe690{/stages/stage/json,null,AVAILABLE,@Spark}
+2019-03-13 13:52:46 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@7a0e7ecd{/stages/pool,null,AVAILABLE,@Spark}
+2019-03-13 13:52:46 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@54e3658c{/stages/pool/json,null,AVAILABLE,@Spark}
+2019-03-13 13:52:46 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@43e9089{/storage,null,AVAILABLE,@Spark}
+2019-03-13 13:52:46 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@3c5dbdf8{/storage/json,null,AVAILABLE,@Spark}
+2019-03-13 13:52:46 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@352c44a8{/storage/rdd,null,AVAILABLE,@Spark}
+2019-03-13 13:52:46 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@7aac8884{/storage/rdd/json,null,AVAILABLE,@Spark}
+2019-03-13 13:52:46 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@a66e580{/environment,null,AVAILABLE,@Spark}
+2019-03-13 13:52:46 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@5b852b49{/environment/json,null,AVAILABLE,@Spark}
+2019-03-13 13:52:46 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@cdb2d95{/executors,null,AVAILABLE,@Spark}
+2019-03-13 13:52:46 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@122d6c22{/executors/json,null,AVAILABLE,@Spark}
+2019-03-13 13:52:46 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@2f5ac102{/executors/threadDump,null,AVAILABLE,@Spark}
+2019-03-13 13:52:46 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@5df778c3{/executors/threadDump/json,null,AVAILABLE,@Spark}
+2019-03-13 13:52:46 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@895416d{/static,null,AVAILABLE,@Spark}
+2019-03-13 13:52:46 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@22a6e998{/,null,AVAILABLE,@Spark}
+2019-03-13 13:52:46 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@55e42449{/api,null,AVAILABLE,@Spark}
+2019-03-13 13:52:46 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@cb7fa71{/jobs/job/kill,null,AVAILABLE,@Spark}
+2019-03-13 13:52:46 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@3dffc764{/stages/stage/kill,null,AVAILABLE,@Spark}
+2019-03-13 13:52:46 INFO  SparkUI:54 - Bound SparkUI to 0.0.0.0, and started at http://10.24.53.199:4040
+2019-03-13 13:52:46 INFO  SparkContext:54 - Added JAR file:/Users/SeanHiggins/ZTextMining/target/scala-2.11/ZTextMining-assembly-0.2.jar at spark://10.24.53.199:53505/jars/ZTextMining-assembly-0.2.jar with timestamp 1552503166339
+2019-03-13 13:52:46 INFO  Executor:54 - Starting executor ID driver on host localhost
+2019-03-13 13:52:46 INFO  Utils:54 - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 53506.
+2019-03-13 13:52:46 INFO  NettyBlockTransferService:54 - Server created on 10.24.53.199:53506
+2019-03-13 13:52:46 INFO  BlockManager:54 - Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+2019-03-13 13:52:46 INFO  BlockManagerMaster:54 - Registering BlockManager BlockManagerId(driver, 10.24.53.199, 53506, None)
+2019-03-13 13:52:46 INFO  BlockManagerMasterEndpoint:54 - Registering block manager 10.24.53.199:53506 with 366.3 MB RAM, BlockManagerId(driver, 10.24.53.199, 53506, None)
+2019-03-13 13:52:46 INFO  BlockManagerMaster:54 - Registered BlockManager BlockManagerId(driver, 10.24.53.199, 53506, None)
+2019-03-13 13:52:46 INFO  BlockManager:54 - Initialized BlockManager: BlockManagerId(driver, 10.24.53.199, 53506, None)
+2019-03-13 13:52:46 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@2bfb583b{/metrics/json,null,AVAILABLE,@Spark}
+2019-03-13 13:52:47 WARN  SparkContext:66 - Using an existing SparkContext; some configuration may not take effect.
+
+Corpus summary:
+	 Training set size: 429 documents
+	 Vocabulary size: 10000 terms
+	 Training set size: 61415 tokens
+	 Preprocessing time: 25.667205615 sec
+
+Finished training LDA model.  Summary:
+	 Training time: 260.951704565 sec
+	 Training data average log likelihood: -1374.6705031491392
+
+20 topics:
+TOPIC 0
+rheingold,	0.030916157991351688
+01,	0.01145431546469617
+computer,	0.008830634064688666
+computing,	0.007346470961319528
+century,	0.007334513942930522
+thought,	0.007102100192820397
+tools,	0.007039237117140771
+text,	0.0064975602332185325
+history,	0.006188972904879083
+note,	0.006107151150878794
+
+TOPIC 1
+rheingold,	0.01603582075437238
+01,	0.01121768009431703
+computer,	0.01028237946064725
+century,	0.0077620924695117385
+computing,	0.007435165343110766
+tools,	0.007052226180950526
+1900,	0.0069610655120496585
+thought,	0.0068765380055417
+history,	0.0066055159757026135
+decade,	0.006176738819497999
+
+TOPIC 2
+rheingold,	0.016039390310565168
+01,	0.011378192435863266
+computer,	0.01001624753118308
+century,	0.0075542822027777215
+thought,	0.007439272660698162
+computing,	0.007203370945543572
+tools,	0.006758012859928407
+1900,	0.006677064437428993
+core,	0.006239951239254744
+history,	0.0061516308521836404
+
+TOPIC 3
+rheingold,	0.01621007102804074
+01,	0.011309171457431036
+computer,	0.008932558895860475
+century,	0.007664879270978571
+computing,	0.00727000770282343
+thought,	0.0068378637164266095
+one,	0.0065434633921997555
+tools,	0.006515646771404575
+1900,	0.006513359317025204
+history,	0.00622696909488447
+
+TOPIC 4
+rheingold,	0.01609808466666551
+computer,	0.011333232177866824
+01,	0.011244490420560685
+century,	0.007785221739722034
+computing,	0.007029141745264398
+1900,	0.00702621929153843
+thought,	0.006920548787540284
+decade,	0.006822559390415376
+history,	0.006306231056673803
+tools,	0.006075780526130442
+
+TOPIC 5
+rheingold,	0.01625155827834562
+01,	0.011222292839955692
+computer,	0.00969625226504065
+century,	0.00797508801571199
+computing,	0.007323413294817311
+1900,	0.007102484763421361
+thought,	0.006987062652823299
+decade,	0.0065504688900777245
+history,	0.00653027062709578
+tools,	0.006444063618324845
+
+TOPIC 6
+rheingold,	0.01620757194844741
+01,	0.011377000237370717
+computer,	0.009280392305368236
+century,	0.007487284962295473
+computing,	0.007290368875983605
+thought,	0.0069682525531533715
+tools,	0.006940910135789731
+1900,	0.006807300071137205
+history,	0.006411215011972386
+decade,	0.006229873330645919
+
+TOPIC 7
+rheingold,	0.016086069635378085
+01,	0.011307452252451894
+computer,	0.010530193691756628
+century,	0.007720986741183808
+computing,	0.007368635971646279
+tools,	0.0066872105255667245
+1900,	0.006674752091856948
+thought,	0.006668940927200653
+history,	0.006350401535405207
+core,	0.006110300914333452
+
+TOPIC 8
+rheingold,	0.016025819921540306
+01,	0.011269955593188077
+computer,	0.008724357068025894
+century,	0.008117769510501168
+1900,	0.007293010936064896
+thought,	0.007182224323001013
+computing,	0.007109359667865365
+one,	0.007013392734338851
+tools,	0.0068485406271315726
+history,	0.006598235312640794
+
+TOPIC 9
+rheingold,	0.016152716704996573
+01,	0.011241056322813317
+computer,	0.009661634292865717
+century,	0.00779701832107566
+thought,	0.0070918266769445905
+tools,	0.006988682665915169
+1900,	0.006836673597288528
+computing,	0.006604906755785758
+history,	0.006517314532428867
+decade,	0.006227772291587699
+
+TOPIC 10
+rheingold,	0.016421490837693186
+01,	0.011366907906539225
+computer,	0.010141371191080838
+century,	0.00765510990225739
+computing,	0.007146162891249841
+thought,	0.007127543381017281
+1900,	0.006963902269781639
+tools,	0.006830572705718806
+history,	0.006253855559921125
+one,	0.006198293435160395
+
+TOPIC 11
+rheingold,	0.01624551714796342
+01,	0.011170804751766275
+computer,	0.01000145641511185
+century,	0.0072699298512544
+tools,	0.006882601625433225
+thought,	0.006822626364254767
+computing,	0.006801424406705905
+1900,	0.006634110190875454
+history,	0.00629415045958766
+text,	0.005974226563337502
+
+TOPIC 12
+rheingold,	0.01624793336365024
+01,	0.011305867025523495
+computer,	0.009140341645437384
+century,	0.008092866771245051
+thought,	0.007440691832440323
+1900,	0.00712497331731882
+tools,	0.00707785921448489
+computing,	0.006779035182973244
+history,	0.006502419326134481
+decade,	0.006318153799642872
+
+TOPIC 13
+rheingold,	0.016377601240992884
+01,	0.011095299202344895
+computer,	0.009893665246091731
+century,	0.008065193775243664
+1900,	0.007564523882845916
+thought,	0.007070021815774121
+computing,	0.0070028986268663015
+tools,	0.006700647244094303
+history,	0.006298806513344668
+decade,	0.006158798844076704
+
+TOPIC 14
+rheingold,	0.01609021679777994
+01,	0.011068675127035525
+computer,	0.00910188716916065
+century,	0.008541087213966861
+decade,	0.007141488711491049
+thought,	0.007087953112788964
+1900,	0.007012336732061523
+computing,	0.006916947552632955
+tools,	0.006744173561377081
+history,	0.006340511319467968
+
+TOPIC 15
+rheingold,	0.016312791482337937
+01,	0.011303733452075151
+computer,	0.008172636728483996
+computing,	0.007096997256298316
+century,	0.007082971526307537
+one,	0.006935018890177557
+thought,	0.006903312516530496
+history,	0.006402217716274109
+tools,	0.006332359860054801
+1900,	0.006128032766726577
+
+TOPIC 16
+rheingold,	0.01611442193484333
+01,	0.011131764367952764
+computer,	0.009517389213713083
+century,	0.007866262370100451
+1900,	0.007381040848692347
+thought,	0.007147350461332476
+computing,	0.007038270277879927
+decade,	0.006966046694965788
+tools,	0.0064488252663467424
+history,	0.006315224107811368
+
+TOPIC 17
+rheingold,	0.01621760956861875
+01,	0.011170095314813831
+computer,	0.009686557841681692
+century,	0.007468269118109255
+computing,	0.007283748456343273
+thought,	0.00704067954354971
+1900,	0.006862009444289823
+tools,	0.006574121551805199
+history,	0.006391115215375176
+text,	0.006140574575833473
+
+TOPIC 18
+rheingold,	0.016242842520069998
+01,	0.011327636387919102
+computer,	0.010212363971762232
+century,	0.008214647520248447
+computing,	0.007169586766807474
+1900,	0.007031818737170115
+tools,	0.006973806296568273
+thought,	0.0067480454411485355
+decade,	0.006474775555678728
+history,	0.0064314353138759895
+
+TOPIC 19
+rheingold,	0.015683754113161835
+01,	0.011227681578451821
+computer,	0.01107405005330502
+century,	0.007931010534266501
+computing,	0.007296782120596343
+thought,	0.0069545843481187645
+tools,	0.006730818737618078
+history,	0.006177951754988927
+core,	0.006042892620753638
+decade,	0.005958457756012096
+
+2019-03-13 14:01:21 WARN  NativeCodeLoader:62 - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2019-03-13 14:01:22 INFO  SparkContext:54 - Running Spark version 2.4.0
+2019-03-13 14:01:22 INFO  SparkContext:54 - Submitted application: LDAExample with {
+  input:	List(/Users/SeanHiggins/ZTextMining/src/main/data/processedData/processedZettels),
+  k:	20,
+  maxIterations:	10,
+  docConcentration:	-1.0,
+  topicConcentration:	-1.0,
+  vocabSize:	10000,
+  stopwordFile:	,
+  algorithm:	em,
+  checkpointDir:	None,
+  checkpointInterval:	10
+}
+2019-03-13 14:01:22 INFO  SecurityManager:54 - Changing view acls to: SeanHiggins
+2019-03-13 14:01:22 INFO  SecurityManager:54 - Changing modify acls to: SeanHiggins
+2019-03-13 14:01:22 INFO  SecurityManager:54 - Changing view acls groups to: 
+2019-03-13 14:01:22 INFO  SecurityManager:54 - Changing modify acls groups to: 
+2019-03-13 14:01:22 INFO  SecurityManager:54 - SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(SeanHiggins); groups with view permissions: Set(); users  with modify permissions: Set(SeanHiggins); groups with modify permissions: Set()
+2019-03-13 14:01:23 INFO  Utils:54 - Successfully started service 'sparkDriver' on port 53575.
+2019-03-13 14:01:23 INFO  SparkEnv:54 - Registering MapOutputTracker
+2019-03-13 14:01:23 INFO  SparkEnv:54 - Registering BlockManagerMaster
+2019-03-13 14:01:23 INFO  BlockManagerMasterEndpoint:54 - Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+2019-03-13 14:01:23 INFO  BlockManagerMasterEndpoint:54 - BlockManagerMasterEndpoint up
+2019-03-13 14:01:23 INFO  DiskBlockManager:54 - Created local directory at /private/var/folders/tp/qc0shgmd5y36vv48mt20b0z00000gn/T/blockmgr-9241b409-a651-4a8d-a849-fd6cc9069dfd
+2019-03-13 14:01:23 INFO  MemoryStore:54 - MemoryStore started with capacity 366.3 MB
+2019-03-13 14:01:23 INFO  SparkEnv:54 - Registering OutputCommitCoordinator
+2019-03-13 14:01:23 INFO  log:192 - Logging initialized @3815ms
+2019-03-13 14:01:23 INFO  Server:351 - jetty-9.3.z-SNAPSHOT, build timestamp: unknown, git hash: unknown
+2019-03-13 14:01:23 INFO  Server:419 - Started @3911ms
+2019-03-13 14:01:23 INFO  AbstractConnector:278 - Started ServerConnector@60325987{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+2019-03-13 14:01:23 INFO  Utils:54 - Successfully started service 'SparkUI' on port 4040.
+2019-03-13 14:01:23 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@46c269e0{/jobs,null,AVAILABLE,@Spark}
+2019-03-13 14:01:23 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@70228253{/jobs/json,null,AVAILABLE,@Spark}
+2019-03-13 14:01:23 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@63c12e52{/jobs/job,null,AVAILABLE,@Spark}
+2019-03-13 14:01:23 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@26c47874{/jobs/job/json,null,AVAILABLE,@Spark}
+2019-03-13 14:01:23 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@421056e5{/stages,null,AVAILABLE,@Spark}
+2019-03-13 14:01:23 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@2849434b{/stages/json,null,AVAILABLE,@Spark}
+2019-03-13 14:01:23 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@60bbacfc{/stages/stage,null,AVAILABLE,@Spark}
+2019-03-13 14:01:23 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@476fe690{/stages/stage/json,null,AVAILABLE,@Spark}
+2019-03-13 14:01:23 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@7a0e7ecd{/stages/pool,null,AVAILABLE,@Spark}
+2019-03-13 14:01:23 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@54e3658c{/stages/pool/json,null,AVAILABLE,@Spark}
+2019-03-13 14:01:23 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@43e9089{/storage,null,AVAILABLE,@Spark}
+2019-03-13 14:01:23 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@3c5dbdf8{/storage/json,null,AVAILABLE,@Spark}
+2019-03-13 14:01:23 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@352c44a8{/storage/rdd,null,AVAILABLE,@Spark}
+2019-03-13 14:01:23 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@7aac8884{/storage/rdd/json,null,AVAILABLE,@Spark}
+2019-03-13 14:01:23 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@a66e580{/environment,null,AVAILABLE,@Spark}
+2019-03-13 14:01:23 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@5b852b49{/environment/json,null,AVAILABLE,@Spark}
+2019-03-13 14:01:23 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@cdb2d95{/executors,null,AVAILABLE,@Spark}
+2019-03-13 14:01:23 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@122d6c22{/executors/json,null,AVAILABLE,@Spark}
+2019-03-13 14:01:23 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@2f5ac102{/executors/threadDump,null,AVAILABLE,@Spark}
+2019-03-13 14:01:23 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@5df778c3{/executors/threadDump/json,null,AVAILABLE,@Spark}
+2019-03-13 14:01:23 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@895416d{/static,null,AVAILABLE,@Spark}
+2019-03-13 14:01:23 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@22a6e998{/,null,AVAILABLE,@Spark}
+2019-03-13 14:01:23 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@55e42449{/api,null,AVAILABLE,@Spark}
+2019-03-13 14:01:23 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@cb7fa71{/jobs/job/kill,null,AVAILABLE,@Spark}
+2019-03-13 14:01:23 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@3dffc764{/stages/stage/kill,null,AVAILABLE,@Spark}
+2019-03-13 14:01:23 INFO  SparkUI:54 - Bound SparkUI to 0.0.0.0, and started at http://10.24.53.199:4040
+2019-03-13 14:01:23 INFO  SparkContext:54 - Added JAR file:/Users/SeanHiggins/ZTextMining/target/scala-2.11/ZTextMining-assembly-0.2.jar at spark://10.24.53.199:53575/jars/ZTextMining-assembly-0.2.jar with timestamp 1552503683589
+2019-03-13 14:01:23 INFO  Executor:54 - Starting executor ID driver on host localhost
+2019-03-13 14:01:23 INFO  Utils:54 - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 53576.
+2019-03-13 14:01:23 INFO  NettyBlockTransferService:54 - Server created on 10.24.53.199:53576
+2019-03-13 14:01:23 INFO  BlockManager:54 - Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+2019-03-13 14:01:23 INFO  BlockManagerMaster:54 - Registering BlockManager BlockManagerId(driver, 10.24.53.199, 53576, None)
+2019-03-13 14:01:23 INFO  BlockManagerMasterEndpoint:54 - Registering block manager 10.24.53.199:53576 with 366.3 MB RAM, BlockManagerId(driver, 10.24.53.199, 53576, None)
+2019-03-13 14:01:23 INFO  BlockManagerMaster:54 - Registered BlockManager BlockManagerId(driver, 10.24.53.199, 53576, None)
+2019-03-13 14:01:23 INFO  BlockManager:54 - Initialized BlockManager: BlockManagerId(driver, 10.24.53.199, 53576, None)
+2019-03-13 14:01:24 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@2bfb583b{/metrics/json,null,AVAILABLE,@Spark}
+2019-03-13 14:01:24 WARN  SparkContext:66 - Using an existing SparkContext; some configuration may not take effect.
+
+Corpus summary:
+	 Training set size: 429 documents
+	 Vocabulary size: 10000 terms
+	 Training set size: 61415 tokens
+	 Preprocessing time: 24.442110532 sec
+
+Finished training LDA model.  Summary:
+	 Training time: 285.527060024 sec
+	 Training data average log likelihood: -1374.91612541164
+
+20 topics:
+TOPIC 0
+rheingold,	0.024960575604944576
+01,	0.011538606019605786
+computer,	0.010660739837434131
+century,	0.007955868327842064
+thought,	0.007138263603580404
+1900,	0.007085568507048855
+computing,	0.006985498696024208
+decade,	0.006684553744720072
+tools,	0.006493639540538446
+history,	0.006463962264329458
+
+TOPIC 1
+rheingold,	0.016432235431717675
+01,	0.01123823864414217
+computer,	0.011088846519656217
+century,	0.008070138187551227
+computing,	0.007154958290837213
+thought,	0.006987225254421477
+1900,	0.006972953778795431
+tools,	0.006484077292853334
+history,	0.006284502888239604
+decade,	0.0059873005116581005
+
+TOPIC 2
+rheingold,	0.016481846682583328
+01,	0.011363152039340654
+computer,	0.009578510874839378
+century,	0.007832793303708443
+computing,	0.0073204770026287875
+tools,	0.006765102196579303
+1900,	0.006733228608698529
+thought,	0.006644574615302774
+decade,	0.006487725478178643
+text,	0.0062204968884543065
+
+TOPIC 3
+rheingold,	0.016588593428355024
+01,	0.011382872289393615
+computer,	0.010074007108516319
+century,	0.007514137378756884
+computing,	0.007269702927276049
+thought,	0.007058778637394523
+tools,	0.006635079582018193
+1900,	0.006473956676575914
+history,	0.006343771979252196
+decade,	0.006074157362298172
+
+TOPIC 4
+rheingold,	0.016624865718304033
+01,	0.011338163509106753
+computer,	0.010250377079807025
+century,	0.00718339442150263
+tools,	0.00712513730657821
+thought,	0.0070700128530231795
+computing,	0.006995955247462398
+1900,	0.006916075510901482
+history,	0.0061952763242358625
+core,	0.0061395897610829345
+
+TOPIC 5
+rheingold,	0.01630260096909197
+01,	0.011200665768403978
+computer,	0.00972671058479891
+century,	0.0078082228849440235
+computing,	0.007471044226709767
+thought,	0.006978399508661545
+tools,	0.00673356630429819
+decade,	0.0064946250918389604
+history,	0.006471864472435531
+1900,	0.006313340115664499
+
+TOPIC 6
+rheingold,	0.016475942701139574
+01,	0.011266469169560043
+computer,	0.009414802637473949
+century,	0.008189893364551795
+computing,	0.007400704317767709
+thought,	0.0071931278467708805
+1900,	0.006894297636223221
+tools,	0.006625579935446405
+decade,	0.006611535108159241
+history,	0.006325786670368662
+
+TOPIC 7
+rheingold,	0.01654175210184444
+01,	0.011215538821183195
+computer,	0.009206570268728441
+century,	0.007693932429412983
+computing,	0.007374449521596462
+thought,	0.007202935622865166
+1900,	0.007158476808627218
+tools,	0.006867909767159001
+history,	0.006382042898841757
+core,	0.006203873473848651
+
+TOPIC 8
+rheingold,	0.0163478190806643
+01,	0.011192051473366427
+computer,	0.009480145803176224
+century,	0.008540103484921974
+1900,	0.007223103503601538
+thought,	0.007092792814967516
+computing,	0.006809546210341377
+tools,	0.006617402665218577
+decade,	0.0065528490504865285
+history,	0.006175655896612402
+
+TOPIC 9
+rheingold,	0.017085296991382094
+01,	0.011199597123778784
+computer,	0.01018708859389887
+century,	0.007658187800339608
+computing,	0.00717153303343657
+thought,	0.006718793712456582
+history,	0.006586442116008168
+one,	0.006577049024985296
+tools,	0.006560781119642703
+decade,	0.006558023571134416
+
+TOPIC 10
+rheingold,	0.0164396889112275
+01,	0.011207154739358148
+computer,	0.009557414453933486
+century,	0.0075792808455343265
+computing,	0.007167506961168563
+1900,	0.007034465471805781
+thought,	0.006967369722706163
+history,	0.006738085319494935
+tools,	0.0064677229241370355
+decade,	0.0062540923612026695
+
+TOPIC 11
+rheingold,	0.016704114949732382
+01,	0.011352923858745366
+computer,	0.009674088878405923
+century,	0.00711733518044141
+thought,	0.0070241536115466284
+computing,	0.00698435309914972
+1900,	0.006728088344122469
+tools,	0.006651190785075039
+history,	0.006625777326864235
+title,	0.00589688851088367
+
+TOPIC 12
+rheingold,	0.016235014234087103
+01,	0.011270659190934422
+computer,	0.00980073377078543
+century,	0.007220516433579997
+computing,	0.007135662793773466
+thought,	0.0068347988438159455
+tools,	0.006780276147089228
+1900,	0.006622210837286336
+history,	0.006537417860942511
+one,	0.006225779826978967
+
+TOPIC 13
+rheingold,	0.01627766661473238
+01,	0.011021914095760973
+computer,	0.009947054335839622
+century,	0.007323679607432764
+thought,	0.007200361942443223
+tools,	0.007090050645463906
+computing,	0.007087776316323978
+1900,	0.006944963246937623
+decade,	0.006271081184589529
+history,	0.006209739013394445
+
+TOPIC 14
+rheingold,	0.016433909587664972
+01,	0.011369179389671937
+computer,	0.009067008857668077
+century,	0.008198371960617323
+computing,	0.00732727160055921
+thought,	0.006977257432634702
+1900,	0.006931659035134826
+tools,	0.006697513871128415
+history,	0.006660746050974927
+note,	0.006274107086643883
+
+TOPIC 15
+rheingold,	0.01632206472914934
+01,	0.011126458455791355
+computer,	0.009178610895709427
+century,	0.007875210307925632
+thought,	0.006964876319981642
+computing,	0.006947622412724943
+tools,	0.006924834446424563
+1900,	0.006765229413288645
+history,	0.0063709481339376635
+text,	0.005935745141892435
+
+TOPIC 16
+rheingold,	0.016124939011845103
+01,	0.011223145869331295
+computer,	0.008417359503818753
+century,	0.008105863775459621
+thought,	0.00729404905321177
+1900,	0.006894664020208526
+tools,	0.006868083041387298
+decade,	0.006859571930165847
+computing,	0.006640953734376453
+one,	0.0065492267619637595
+
+TOPIC 17
+rheingold,	0.0166020606253224
+01,	0.011372841401039295
+computer,	0.009935087373076553
+computing,	0.007212487044924652
+thought,	0.007093538243902892
+century,	0.007046908791343193
+tools,	0.006853388700779973
+1900,	0.0062980227102458625
+note,	0.0061945055110523084
+history,	0.006162579381081388
+
+TOPIC 18
+rheingold,	0.016375658146271014
+01,	0.011076952800901034
+computer,	0.00964486263174487
+century,	0.007989991553577156
+computing,	0.007435235019439755
+thought,	0.007046484790661808
+1900,	0.007040733825934111
+tools,	0.006629367929103588
+history,	0.00613717490346608
+one,	0.0060751931591374805
+
+TOPIC 19
+rheingold,	0.01661029530491328
+01,	0.011234385103814155
+computer,	0.009316072561434985
+century,	0.008467019556678636
+thought,	0.00693008647169116
+tools,	0.006775695105713874
+1900,	0.006773481982030555
+computing,	0.006627262728234987
+history,	0.006356904901186674
+decade,	0.006250584120719456
+
